@@ -14,13 +14,24 @@ namespace A5_3_ControlStatements
             MakeAndModel = makeAndModel;
             State = state;
         }
-
+        
         public bool IsNoFaultState
         {
             get
             {
+                /*
+                if ( Test = "MA" || Test = "NJ")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                */
                 bool noFaultState;
 
+                
                 switch (State)
                 {
                     case "MA": case "NJ":
@@ -32,6 +43,7 @@ namespace A5_3_ControlStatements
                         break;
                 }
                 return noFaultState;
+                
             }
         }
     }
